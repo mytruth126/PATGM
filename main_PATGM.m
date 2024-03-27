@@ -4,6 +4,7 @@ nf=2; % Verification set size
 X=Input_data();X=X(:);X0=X(1:end-nf,:);
 n=length(X)-nf;
 %% PATGM by Dingo
+addpath(genpath('优化算法'))
 tic
 lb=[0,0,0];ub=[4,n/3,n/3];dim=3;fobj=@PATGM;
 % 种群数量
